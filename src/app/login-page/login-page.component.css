@@ -1,0 +1,64 @@
+body{
+    background-image: url(https://wallpaperaccess.com/full/6169319.jpg);
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+#loginIcon{
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+.loginForm{
+    height: 700px;
+    margin: auto;
+    width: 50%;
+    background-color: aliceblue;
+    border-radius: 100px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    padding: 5px;
+}
+.loginForm img{
+    height: 300px;
+    width: 100%;
+    border-radius: 100px 100px 0px 0px;
+}
+.logReg{
+    height: 350px;
+    margin: auto;
+    width: 60%;
+    background-color: whitesmoke;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+input{
+    height: 50px;
+    width: 300px;
+    border-radius: 10px;
+    border: 2px solid grey;
+}
+::placeholder{
+    font-size: 20px;
+}
+p{
+    color: blue;
+    cursor: pointer;
+}
+#closeButton{
+    float: right;
+    padding: 10px; 
+    cursor: pointer;
+}
+#registerIcon{
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    float: right;
+}
