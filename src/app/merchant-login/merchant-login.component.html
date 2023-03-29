@@ -1,0 +1,35 @@
+<html>
+    <body>
+        <img src="https://t3.ftcdn.net/jpg/01/88/66/28/360_F_188662840_KDEuvSi74V54mVoESvJhELBNS3X7rOW2.jpg" alt="" id="loginIcon" title="customerLogin" (click)="backToCustometPage()">
+        <img src="https://cdn0.iconfinder.com/data/icons/kameleon-free-pack-rounded/110/Food-Dome-512.png" alt="" id="merchantIcon" title="Merchant" ><br/>
+        <button class="btn btn-danger" id="restaurant" >Add restaurant</button>
+        <button class="btn btn-danger" id="merchantLogin" (click)="merchantBodyOpen()">Merchant Login</button><br/><br/><br/>
+            <h3 id="d">Why be a part of us?</h3>
+            <div class="info"></div>
+            <div class="body" *ngIf="merchantBody">
+                <div class="merchantForm" *ngIf="merchantLogin==false">
+                    <div class="mClose" (click)="merchantBodyClose()" title="Close">
+                       &times; 
+                    </div>
+                    <h2 id="mLogin">Merchant Login</h2><br/><br/>
+                    <input type="email" placeholder="📧 Enter your email"><br/><br/>
+                    <input type="password" placeholder="🔑 Enter your password"><br/><br/>
+                    <button class="btn btn-danger">Login!</button><br/><br/>
+                    Don't have an account yet?<br/>
+                    <p (click)="merchantRegister()">Register now!</p>
+                </div>
+                <div class="merchantRegisterForm" *ngIf="merchantLogin==true">
+                    <div class="mClose" (click)="merchantBodyClose()" title="Close">
+                       &times; 
+                    </div>
+                    <h2 id="mLogin">Merchant Register</h2><br/><br/>
+                    <input type="email" placeholder="📧 Enter your email"><br/><br/>
+                    <input type="name" placeholder="🍽️ Enter restaurent name"><br/><br/>
+                    <input type="password" placeholder="🔑 Enter your password"><br/><br/>
+                    <button class="btn btn-primary">Register!</button><br/><br/>
+                    Already Registered?<br/>
+                    <p (click)="Login()" style="color: red;">Login!</p>
+                </div>
+            </div>
+    </body>
+</html>

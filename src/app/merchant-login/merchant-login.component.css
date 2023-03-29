@@ -1,0 +1,105 @@
+body{
+    background-image: url(https://png.pngtree.com/background/20210710/original/pngtree-geometric-gradient-gourmet-fast-food-advertising-poster-background-material-picture-image_1006818.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 38%;
+    height: 100vh;
+    width: 100vw;
+    background-color: whitesmoke;
+}
+#loginIcon{
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+#merchantIcon{
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    position: fixed;
+    top: 0px;
+    right:0px;
+}
+#restaurant{
+    margin-top: 200px;
+    margin-left: 200px;
+    border-radius: 30px;
+}
+#merchantLogin{
+    margin-top: 200px;
+    margin-right: 200px;
+    float: right;
+    border-radius: 30px;
+}
+#d{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.info{
+    background-color: aliceblue;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    margin: auto;
+    width: 70%;
+    height: 40%;
+    border-radius: 30px;
+}
+.body{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color : rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.merchantForm{
+    height: 50%;
+    width: 35%;
+    background-color: aliceblue;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-radius: 100px;
+    text-align: center;
+}
+.mClose{
+   float: right;
+   margin-top: 10px;
+   margin-right:45px;
+   font-size: 35px;
+   cursor: pointer;
+}
+#mLogin{
+    margin-top: 25px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+input{
+    height: 50px;
+    width: 300px;
+    border-radius: 10px;
+    border: 2px solid grey;
+
+}
+::placeholder{
+    font-size: 20px;
+}
+p{
+    color: blue;
+    cursor: pointer;
+}
+button{
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.merchantRegisterForm{
+    height: 57%;
+    width: 37%;
+    background-color: aliceblue;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-radius: 100px;
+    text-align: center;
+}

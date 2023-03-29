@@ -1,7 +1,7 @@
 <html>
     <body>
         <img src="https://t3.ftcdn.net/jpg/01/88/66/28/360_F_188662840_KDEuvSi74V54mVoESvJhELBNS3X7rOW2.jpg" alt="" id="loginIcon" title="customerLogin" (click)="customerLoginRegisterForm()">
-        <img src="https://cdn0.iconfinder.com/data/icons/kameleon-free-pack-rounded/110/Food-Dome-512.png" alt="" id="registerIcon" title="merchantLogin">
+        <!--CustomerLogin-->
         <ng-container *ngIf="loginRegisterForm==true; then displayLoginRegisterForm; else closeLoginRegisterForm"></ng-container>
         <ng-template #displayLoginRegisterForm>
             <div class="loginForm">
@@ -30,5 +30,9 @@
             </div>
         </ng-template>
         <ng-template #closeLoginRegisterForm></ng-template>
+        <!---->
+        <!--Redirecting to Merchant-->
+        <img src="https://cdn0.iconfinder.com/data/icons/kameleon-free-pack-rounded/110/Food-Dome-512.png" alt="" id="merchantIcon" title="Merchant" (click)="merchant()">
+        <!---->
     </body>
 </html>

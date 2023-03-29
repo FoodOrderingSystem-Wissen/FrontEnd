@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-page',
@@ -6,10 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./login-page.component.css']
 })
 export class LoginPageComponent {
-  loginRegisterForm:boolean=false;
+  constructor(private router:Router){
+  }
+
+  //CustomerLoginRegisterForm
+  loginRegisterForm:boolean=true;
   logReg:boolean=false;
   customerLoginRegisterForm=()=>this.loginRegisterForm=true
   customerRegister=()=>this.logReg=true
   customerLogin=()=>this.logReg=false
-  closingCustomerLoginForm=()=>this.loginRegisterForm=false
+  closingCustomerLoginForm=()=>{this.loginRegisterForm=false; this.logReg=false}
+  //Redirecting to Merchant
+  merchant=()=> this.router.navigate(['/merchant']);
+
 }
