@@ -1,10 +1,11 @@
-body{
+.merchant-page-div{
     background-image: url(https://png.pngtree.com/background/20210710/original/pngtree-geometric-gradient-gourmet-fast-food-advertising-poster-background-material-picture-image_1006818.jpg);
     background-repeat: no-repeat;
     background-size: 100% 38%;
     height: 100vh;
     width: 100vw;
     background-color: whitesmoke;
+    margin-top: 67px;
 }
 #loginIcon{
     height: 100px;
