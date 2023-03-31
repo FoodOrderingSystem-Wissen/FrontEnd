@@ -1,6 +1,4 @@
-        <div class="login-div">
-            
-        <img src="https://t3.ftcdn.net/jpg/01/88/66/28/360_F_188662840_KDEuvSi74V54mVoESvJhELBNS3X7rOW2.jpg" alt="" id="loginIcon" title="customerLogin" (click)="customerLoginRegisterForm()">
+        <div class="login-div">     
         <!--CustomerLogin-->
         <ng-container *ngIf="loginRegisterForm==true; then displayLoginRegisterForm; else closeLoginRegisterForm"></ng-container>
         <ng-template #displayLoginRegisterForm>
@@ -9,7 +7,7 @@
                 <div *ngIf="logReg==false; then login; else register"></div>
                     <ng-template #login>
                         <div class="logReg">
-                        <h2>Login <span title="close" id="closeButton" (click)="closingCustomerLoginForm()">❌</span></h2><br/> 
+                        <h2>Login</h2><br/> 
                         <input type="email" placeholder="📧 Enter your email"><br/><br/>
                         <input type="password" placeholder="🔑 Enter your password"><br/><br/>
                         <button class="btn btn-danger">Login!</button><br/><br/>
@@ -19,7 +17,7 @@
                     </ng-template>
                     <ng-template #register>
                         <div class="logReg">
-                        <h2>Register<span title="close" id="closeButton" (click)="closingCustomerLoginForm()">❌</span></h2><br/>
+                        <h2>Register</h2><br/>
                         <input type="email" placeholder="📨 Enter your email"><br/><br/>
                         <input type="password" placeholder="🗝️ Enter your password"><br/><br/>
                         <button class="btn btn-primary">Register!</button><br/><br/>  
@@ -30,8 +28,4 @@
             </div>
         </ng-template>
         <ng-template #closeLoginRegisterForm></ng-template>
-        <!---->
-        <!--Redirecting to Merchant-->
-        <img src="https://cdn0.iconfinder.com/data/icons/kameleon-free-pack-rounded/110/Food-Dome-512.png" alt="" id="merchantIcon" title="Merchant" (click)="merchant()">
-        <!---->
         </div>

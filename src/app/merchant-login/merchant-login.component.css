@@ -5,37 +5,21 @@
     height: 100vh;
     width: 100vw;
     background-color: whitesmoke;
-    margin-top: 67px;
-}
-#loginIcon{
-    height: 100px;
-    width: 100px;
-    border-radius: 10px;
-    padding: 5px;
-    cursor: pointer;
-}
-#merchantIcon{
-    height: 100px;
-    width: 100px;
-    border-radius: 10px;
-    padding: 5px;
-    cursor: pointer;
-    position: fixed;
-    top: 0px;
-    right:0px;
+    margin-top: 80px;
 }
 #restaurant{
-    margin-top: 200px;
+    margin-top: 300px;
     margin-left: 200px;
     border-radius: 30px;
 }
 #merchantLogin{
-    margin-top: 200px;
+    margin-top: 300px;
     margin-right: 200px;
     float: right;
     border-radius: 30px;
 }
 #d{
+    
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -46,6 +30,7 @@
     width: 70%;
     height: 40%;
     border-radius: 30px;
+   
 }
 .body{
     position: absolute;
@@ -99,6 +84,14 @@ button{
 .merchantRegisterForm{
     height: 57%;
     width: 37%;
+    background-color: aliceblue;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-radius: 100px;
+    text-align: center;
+}
+.restaurentRegisterForm{
+    height: 50%;
+    width: 35%;
     background-color: aliceblue;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     border-radius: 100px;

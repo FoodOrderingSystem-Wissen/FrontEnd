@@ -13,7 +13,6 @@ export class LoginPageComponent {
   //CustomerLoginRegisterForm
   loginRegisterForm:boolean=true;
   logReg:boolean=false;
-  customerLoginRegisterForm=()=>this.loginRegisterForm=true
   customerRegister=()=>this.logReg=true
   customerLogin=()=>this.logReg=false
   closingCustomerLoginForm=()=>{this.loginRegisterForm=false; this.logReg=false}
