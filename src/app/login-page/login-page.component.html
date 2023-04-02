@@ -4,7 +4,7 @@
         <div class="col-md-6 w-100 m-auto">
             <div class="loginForm">
                 <!-- Login form -->
-                <form action="#" *ngIf="showLogin"
+                <form action="#" *ngIf="showLogin" (ngSubmit)="login(email.value, passwordVal.value)"
                     class="form d-flex flex-column justify-content-center align-items-center mb-3" ngNativeValidate>
                     <h2>Login</h2>
                     <div class="input">
@@ -19,7 +19,7 @@
                             <i class="fa fa-eye-slash" aria-hidden="true" *ngIf="show"></i>
                         </button>
                     </div>
-                    <button class="btn loginBtn" (click)="login(email.value, passwordVal.value)">Login!</button>
+                    <button class="btn loginBtn">Login!</button>
                     <div class="formChange">
                         Don't have an account yet?
                         <p (click)="showRegistrationForm()">Register now!</p>
@@ -27,6 +27,7 @@
                 </form>
                 <!-- Registration form -->
                 <form action="#" *ngIf="showRegistration"
+                    (ngSubmit)="register(email.value, passwordVal.value,name.value,contact.value,address.value)"
                     class="form d-flex flex-column justify-content-center align-items-center mb-3" ngNativeValidate>
                     <h2>Registration</h2>
                     <div class="input">
@@ -58,8 +59,7 @@
                         <i class="fa-solid fa-location-dot"></i>
                         <input type="text" placeholder="Enter your Address" required #address>
                     </div>
-                    <button class="btn registerBtn"
-                        (click)="register(email.value, passwordVal.value,name.value,contact.value,address.value)">Register!</button>
+                    <button class="btn registerBtn">Register!</button>
                     <div class="formChange register">
                         Already have an account?
                         <p (click)="showLoginForm()">Login now!</p>

@@ -5,22 +5,23 @@
 <div class="form-container d-flex flex-column justify-content-center align-items-center text-center"
     *ngIf="displayRegistration==true">
     <div class="col-md-12">
-        <form action="#" class="form d-flex flex-column justify-content-center align-items-center mb-3" ngNativeValidate >
+        <form action="#" class="form d-flex flex-column justify-content-center align-items-center mb-3" ngNativeValidate
+            (ngSubmit)="register(emailValue.value, passwordValue.value,nameValue.value,passwordAgainValue.value)">
             <div class="closeForm mt-3 position-relative m-auto" (click)="closeForm()" title="Close">
                 <i class="fa-solid fa-xmark"></i>
             </div>
             <h2>Merchant Registration</h2>
             <div class="input">
                 <i class="fa-solid fa-at"></i>
-                <input type="email" placeholder="Enter your email" required>
+                <input type="email" placeholder="Enter your email" required #emailValue>
             </div>
             <div class="input">
                 <i class="fa-solid fa-house-chimney"></i>
-                <input type="text" placeholder="Enter restaurant name" required>
+                <input type="text" placeholder="Enter restaurant name" required #nameValue>
             </div>
             <div class="input">
                 <i class="fa-solid fa-key"></i>
-                <input [type]="password" placeholder="Enter your password" minlength=8 required>
+                <input [type]="password" placeholder="Enter your password" minlength=8 required #passwordValue>
                 <button class="unhidePass" (click)="onClick()">
                     <i class="fa fa-eye" aria-hidden="true" *ngIf="!show"></i>
                     <i class="fa fa-eye-slash" aria-hidden="true" *ngIf="show"></i>
@@ -28,7 +29,7 @@
             </div>
             <div class="input">
                 <i class="fa-solid fa-lock"></i>
-                <input type="password" placeholder="Enter your password again" minlength=8 required>
+                <input type="password" placeholder="Enter your password again" minlength=8 required #passwordAgainValue>
             </div>
             <button class="btn registerBtn">Register!</button>
             <div class="formChange register">
@@ -41,18 +42,19 @@
 <div class="form-container d-flex flex-column justify-content-center align-items-center text-center"
     *ngIf="displayLogin==true">
     <div class="col-md-12">
-        <form action="#" class="form d-flex flex-column justify-content-center align-items-center mb-3" ngNativeValidate >
+        <form action="#" class="form d-flex flex-column justify-content-center align-items-center mb-3" ngNativeValidate
+            (ngSubmit)="login(emailValue.value, passwordValue.value)">
             <div class="closeForm mt-3 position-relative m-auto" (click)="closeForm()" title="Close">
                 <i class="fa-solid fa-xmark"></i>
             </div>
             <h2>Merchant Login</h2>
             <div class="input">
                 <i class="fa-solid fa-at"></i>
-                <input type="email" placeholder="Enter your email" required>
+                <input type="email" placeholder="Enter your email" required #emailValue>
             </div>
             <div class="input">
                 <i class="fa-solid fa-key"></i>
-                <input [type]="password" placeholder="Enter your password" minlength=8 required>
+                <input [type]="password" placeholder="Enter your password" minlength=8 required #passwordValue>
                 <button class="unhidePass" (click)="onClick()">
                     <i class="fa fa-eye" aria-hidden="true" *ngIf="!show"></i>
                     <i class="fa fa-eye-slash" aria-hidden="true" *ngIf="show"></i>
@@ -75,17 +77,10 @@
             <div class="row text-center">
                 <div class="col-lg-6 col-12">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique recusandae maiores qui eaque
-                        ea sint
-                        natus,
-                        numquam dolorum nemo, repellat quidem, vel a suscipit quia error quo explicabo rem ipsam.
+
                     </p>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut dolorum molestiae quasi,
-                        doloremque,
-                        accusantium maxime ullam quam necessitatibus sed voluptates earum. Placeat incidunt quod ipsam
-                        laboriosam
-                        quasi et sit perferendis.
+
                     </p>
                     <br>
                     <p class="text-center blockquote">Come, grow with us!</p>
