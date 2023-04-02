@@ -15,8 +15,8 @@
                 <input type="email" placeholder="Enter your email" required>
             </div>
             <div class="input">
-                <i class="fa-solid fa-at"></i>
-                <input type="email" placeholder="Enter restaurant name" required>
+                <i class="fa-solid fa-house-chimney"></i>
+                <input type="text" placeholder="Enter restaurant name" required>
             </div>
             <div class="input">
                 <i class="fa-solid fa-key"></i>
@@ -27,12 +27,8 @@
                 </button>
             </div>
             <div class="input">
-                <i class="fa-solid fa-key"></i>
-                <input [type]="password" placeholder="Enter your password again" minlength=8 required>
-                <button class="unhidePass" (click)="onClick()">
-                    <i class="fa fa-eye" aria-hidden="true" *ngIf="!show"></i>
-                    <i class="fa fa-eye-slash" aria-hidden="true" *ngIf="show"></i>
-                </button>
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="Enter your password again" minlength=8 required>
             </div>
             <button class="btn registerBtn">Register!</button>
             <div class="formChange register">

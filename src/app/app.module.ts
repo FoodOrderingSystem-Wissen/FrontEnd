@@ -9,6 +9,7 @@ import { MerchantLoginComponent } from './merchant-login/merchant-login.componen
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { IonicModule } from '@ionic/angular';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { IonicModule } from '@ionic/angular';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    IonicModule.forRoot()
+    IonicModule.forRoot(),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
