@@ -1,44 +1,45 @@
 <div class="merchant-page-div">
     <button class="btn btn-danger" id="restaurant" (click)="restaurantReg()">Add restaurant</button>
-    <button class="btn btn-danger" id="merchantLogin" (click)="merchantBodyOpen()">Merchant Login</button><br/><br/><br/>
-        <h3 id="d">Why be a part of us?</h3>
-        <div class="info"></div>
-        <div class="body" *ngIf="merchantBody">
-            <div class="merchantForm" *ngIf="merchantLogin==false">
-                <div class="mClose" (click)="merchantBodyClose()" title="Close">
-                   &times; 
-                </div>
-                <h2 id="mLogin">Merchant Login</h2><br/><br/>
-                <input type="email" placeholder="📧 Enter your email"><br/><br/>
-                <input type="password" placeholder="🔑 Enter your password"><br/><br/>
-                <button class="btn btn-danger">Login!</button><br/><br/>
-                Don't have an account yet?<br/>
-                <p (click)="merchantRegister()">Register now!</p>
+    <button class="btn btn-danger" id="merchantLogin" (click)="merchantBodyOpen()">Merchant
+        Login</button><br /><br /><br />
+    <h3 id="d">Why be a part of us?</h3>
+    <div class="info"></div>
+    <div class="body" *ngIf="merchantBody">
+        <div class="merchantForm" *ngIf="merchantLogin==false">
+            <div class="mClose" (click)="merchantBodyClose()" title="Close">
+                &times;
             </div>
-            <div class="merchantRegisterForm" *ngIf="merchantLogin==true">
-                <div class="mClose" (click)="merchantBodyClose()" title="Close">
-                   &times; 
-                </div>
-                <h2 id="mLogin">Merchant Register</h2><br/><br/>
-                <input type="email" placeholder="📧 Enter your email"><br/><br/>
-                <input type="name" placeholder="🍽️ Enter restaurent name"><br/><br/>
-                <input type="password" placeholder="🔑 Enter your password"><br/><br/>
-                <button class="btn btn-primary">Register!</button><br/><br/>
-                Already Registered?<br/>
-                <p (click)="Login()" style="color: red;">Login!</p>
-            </div>
-            <!--Add Resutaurent-->
-            <div class="restaurentRegisterForm" *ngIf="restaurantRegistration">
-                <div class="mClose" (click)="merchantBodyClose()" title="Close">
-                   &times; 
-                </div>
-                <h2 id="mLogin">Join US</h2><br/><br/>
-                <input type="email" placeholder="📧 Enter your email"><br/><br/>
-                <input type="name" placeholder="🍽️ Enter restaurent name"><br/><br/>
-                <input type="password" placeholder="🔑 Enter your password"><br/><br/>
-                <button class="btn btn-primary">Register!</button><br/><br/>
-            </div>
-
+            <h2 id="mLogin">Merchant Login</h2><br /><br />
+            <input type="email" placeholder="📧 Enter your email"><br /><br />
+            <input type="password" placeholder="🔑 Enter your password"><br /><br />
+            <button class="btn btn-danger">Login!</button><br /><br />
+            Don't have an account yet?<br />
+            <p (click)="merchantRegister()">Register now!</p>
         </div>
+        <div class="merchantRegisterForm" *ngIf="merchantLogin==true">
+            <div class="mClose" (click)="merchantBodyClose()" title="Close">
+                &times;
+            </div>
+            <h2 id="mLogin">Merchant Register</h2><br /><br />
+            <input type="email" placeholder="📧 Enter your email"><br /><br />
+            <input type="name" placeholder="🍽️ Enter restaurent name"><br /><br />
+            <input type="password" placeholder="🔑 Enter your password"><br /><br />
+            <button class="btn btn-primary">Register!</button><br /><br />
+            Already Registered?<br />
+            <p (click)="Login()" style="color: red;">Login!</p>
+        </div>
+        <!--Add Resutaurent-->
+        <div class="restaurentRegisterForm" *ngIf="restaurantRegistration">
+            <div class="mClose" (click)="merchantBodyClose()" title="Close">
+                &times;
+            </div>
+            <h2 id="mLogin">Join US</h2><br /><br />
+            <input type="email" placeholder="📧 Enter your email"><br /><br />
+            <input type="name" placeholder="🍽️ Enter restaurent name"><br /><br />
+            <input type="password" placeholder="🔑 Enter your password"><br /><br />
+            <button class="btn btn-primary">Register!</button><br /><br />
+        </div>
+
+    </div>
 
 </div>

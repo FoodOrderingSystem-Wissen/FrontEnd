@@ -6,20 +6,18 @@ import { IonicModule, IonInput } from '@ionic/angular';
   templateUrl: './login-page.component.html',
   styleUrls: ['./login-page.component.css'],
 })
-export class LoginPageComponent{
-
-
-  constructor(private router:Router,private renderer: Renderer2){
+export class LoginPageComponent {
+  constructor(private router: Router, private renderer: Renderer2) {
   }
 
   //CustomerLoginRegisterForm
-  loginRegisterForm:boolean=true;
-  logReg:boolean=false;
-  customerRegister=()=>this.logReg=true
-  customerLogin=()=>this.logReg=false
-  closingCustomerLoginForm=()=>{this.loginRegisterForm=false; this.logReg=false}
+  loginRegisterForm: boolean = true;
+  logReg: boolean = false;
+  customerRegister = () => this.logReg = true
+  customerLogin = () => this.logReg = false
+  closingCustomerLoginForm = () => { this.loginRegisterForm = false; this.logReg = false }
   //Redirecting to Merchant
-  merchant=()=> this.router.navigate(['/merchant']);
+  merchant = () => this.router.navigate(['/merchant']);
 
   password: string | undefined;
 
@@ -38,7 +36,4 @@ export class LoginPageComponent{
       this.show = false;
     }
   }
-  
-  
-
 }

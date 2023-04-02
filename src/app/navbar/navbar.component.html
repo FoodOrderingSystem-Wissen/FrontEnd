@@ -1,17 +1,25 @@
 <div class="container-fluid home text-center">
+<<<<<<< HEAD
   <nav class="navbar bg-body-tertiary bg-success">
+=======
+  <nav class="navbar bg-body-tertiary" style="background-color:none">
+>>>>>>> d633af723b5234876562c56b86a32c710c90fd90
     <div class="container">
-      <a class="navbar-brand" href="#">
-        Burger
+      <a class="navbar-brand" routerLinkActive="active" routerLink="/">
+        <i class="fa-solid fa-bowl-food"></i>
+      </a>
+      <a class="navbar-brand" routerLinkActive="active" routerLink="/merchant">
+        <i class="fa-solid fa-utensils"></i>
       </a>
     </div>
   </nav>
   <!-- background image and overlay -->
-  <div class="backgroundImage" [ngStyle]="{'background-image':'url('+images[1]+')'}"></div>
+  <!-- [ngStyle]="{'background-image':'url('+images[0]+')'}" -->
+  <div class="backgroundImage" [ngStyle]="{'background-image':'url('+images[0]+')'}"></div>
   <div class="overlay"></div>
   <!--  -->
-  <div class="title h-100 d-flex flex-column justify-content-center align-items-center text-center">
+  <div class="title h-100 d-flex flex-column justify-content-start mt-5 align-items-center text-center">
     <h1 class="display-1">Zwiggy</h1>
-    <h1 class="display-4">2023</h1>
+    <h1 class="display-4">The Fusion of Food ordering!</h1>
   </div>
 </div>

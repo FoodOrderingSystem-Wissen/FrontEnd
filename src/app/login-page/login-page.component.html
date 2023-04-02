@@ -1,46 +1,48 @@
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<div class="login-div">     
-            <!--CustomerLogin-->
-            <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
-                    <ng-container *ngIf="loginRegisterForm==true; then displayLoginRegisterForm; else closeLoginRegisterForm"></ng-container>
-                    <ng-template #displayLoginRegisterForm>
-                        <div class="loginForm">
-                            
-                            <div *ngIf="logReg==false; then login; else register"></div>
-                                <ng-template #login>
-                                    <div class="logReg">
-                                    <h2 class="headerLogin">Login</h2><br/> 
-                                    <input type="email" placeholder="Enter your email"><br/><br/>
-                                    
-                                      <input [type]="password">
-                                        <button (click)="onClick()">
-                                        <i class="fa fa-eye" aria-hidden="true" *ngIf="!show"></i>
-                                        <i class="fa fa-eye-slash" aria-hidden="true" *ngIf="show"></i>
-                                        </button>
-                                    
-                                    <br>                      
-                                    <button class="btn">Login!</button><br/><br/>
-                                    Don't have an account yet?<br/>
-                                    <p (click)="customerRegister()">Register now!</p>
-                                    </div>
-                                </ng-template>
-                                <ng-template #register>
-                                    <div class="logReg">
-                                    <h2 class="headerLogin">Register</h2><br/>
-                                    <input type="email" placeholder="Enter your email"><br/><br/>
-                                    <input type="password" placeholder="Enter your password"><br/><br/>
-                                    <button class="btn btn-primary">Register!</button><br/><br/>  
-                                    Already have an account?<br/>
-                                    <p (click)="customerLogin()" style="color: red;">Login now!</p>
-                                    </div>  
-                                </ng-template>
+<div id="loginContainer">
+    <!--CustomerLogin-->
+    <div class="row content w-100">
+        <div class="col-md-6 m-auto">
+            <div class="loginForm">
+                <div *ngIf="logReg==false; then login; else register"></div>
+                <ng-template #login>
+                    <form action="#">
+                        <div class="logReg d-flex flex-column justify-content-center align-items-center">
+                            <h2 class="headerLogin">Login</h2>
+                            <div class="input">
+                                <i class="fa-solid fa-at"></i>
+                                <input type="email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="input">
+                                <i class="fa-solid fa-key"></i>
+                                <input [type]="password" placeholder="Enter your email" required>
+                                <button (click)="onClick()">
+                                    <i class="fa fa-eye" aria-hidden="true" *ngIf="!show"></i>
+                                    <i class="fa fa-eye-slash" aria-hidden="true" *ngIf="show"></i>
+                                </button>
+                            </div>
+                            <button class="btn">Login!</button>
+                            Don't have an account yet?<br />
+                            <p (click)="customerRegister()">Register now!</p>
                         </div>
-                    </ng-template>
-                    <ng-template #closeLoginRegisterForm></ng-template>
-                </div>
-                <div class="col-md-3"></div>
+                    </form>
+                </ng-template>
+                <ng-template #register>
+                    <form action="">
+                        <div class="logReg d-flex flex-column justify-content-center align-items-center">
+                            <h2 class="headerLogin">Register</h2><br />
+                            <div class="input">
+                                <input type="email" placeholder="Enter your email">
+                            </div>
+                            <div class="input">
+                                <input type="password" placeholder="Enter your password">
+                            </div>
+                            <button class="btn btn-primary">Register!</button>
+                            Already have an account?<br />
+                            <p (click)="customerLogin()" style="color: red;">Login now!</p>
+                        </div>
+                    </form>
+                </ng-template>
             </div>
+        </div>
     </div>
+</div>

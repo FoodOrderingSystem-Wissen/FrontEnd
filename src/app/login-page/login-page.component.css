@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 
 
 .logReg{
+=======
+#loginContainer{
+    margin-bottom:10rem;
+}
+.logReg {
+>>>>>>> d633af723b5234876562c56b86a32c710c90fd90
     height: auto;
     margin: auto;
+    margin-top: -5rem;
     width: 58%;
     background-color: white;
     border-radius: 50px;
@@ -11,25 +19,35 @@
     text-align: center;
 }
 
-.headerLogin{
+.headerLogin {
     padding-top: 50px;
     padding-bottom: 50px;
 }
 
-input{
-    height: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 10px;
+/* Input fields */
+.input{
+    width: 80%;
+    padding: 0.5rem;
+    margin:1rem;
+    border: 1px black solid;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+input {
+    width: 100%;
+    padding: 0 20px;
     text-align: center;
-    border-width: 1px;
+    border: none;
+    outline:none;
 }
 
 input::placeholder {
     font-weight: 5px !important;
-  }
+}
 
-.btn{
+.btn {
     margin-top: 30px;
     height: auto;
     width: 100px;
@@ -42,36 +60,27 @@ input::placeholder {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.btn:hover{
+.btn:hover {
     cursor: pointer;
     transform: scale(1.1);
 }
 
 
-::placeholder{
+::placeholder {
     font-size: 20px;
 }
-p{
+
+p {
     color: blue;
     cursor: pointer;
 }
 
-.password-container {
-    position: relative;
-    z-index: 1;
-  }
-  
-  .toggle-password {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    cursor: pointer;
-    z-index: 1; 
-  }
-
-  :host {
+:host {
     /* display: flex; */
-    
+
     align-items: center;
+<<<<<<< HEAD
   }
+=======
+}
+>>>>>>> d633af723b5234876562c56b86a32c710c90fd90

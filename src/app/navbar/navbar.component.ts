@@ -9,5 +9,6 @@ export class NavbarComponent {
   //images
   images = [
     "./assets/homePageBG.jpg",
+    "./assets/homePageBG1b.jpg",
   ]
 }
