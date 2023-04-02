@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
-import { IonicModule, IonInput } from '@ionic/angular';
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
@@ -11,17 +10,15 @@ export class LoginPageComponent {
   }
 
   //CustomerLoginRegisterForm
-  loginRegisterForm: boolean = true;
   logReg: boolean = false;
   customerRegister = () => this.logReg = true
   customerLogin = () => this.logReg = false
-  closingCustomerLoginForm = () => { this.loginRegisterForm = false; this.logReg = false }
   //Redirecting to Merchant
   merchant = () => this.router.navigate(['/merchant']);
 
 
 
-   // show or hide the text in password input field
+  // show or hide the text in password input field
   password: string | undefined;
 
   show = false;
@@ -39,5 +36,5 @@ export class LoginPageComponent {
     }
   }
 
-  
+
 }

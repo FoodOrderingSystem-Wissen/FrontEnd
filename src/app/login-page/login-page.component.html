@@ -5,54 +5,59 @@
             <div class="loginForm">
                 <div *ngIf="logReg==false; then login; else register"></div>
                 <ng-template #login>
-                    <form action="#">
-                        <div class="logReg d-flex flex-column justify-content-center align-items-center">
-                            <h2 class="headerLogin">Login</h2>
-                            <div class="input">
-                                <i class="fa-solid fa-at"></i>
-                                <input type="email" placeholder="Enter your email" required>
-                            </div>
-                            <div class="input">
-                                <i class="fa-solid fa-key"></i>
-                                <input [type]="password" placeholder="Enter your password" required>
-                                <button (click)="onClick()">
-                                    <i class="fa fa-eye" aria-hidden="true" *ngIf="!show"></i>
-                                    <i class="fa fa-eye-slash" aria-hidden="true" *ngIf="show"></i>
-                                </button>
-                            </div>
-                            <button class="btn">Login!</button>
-                            Don't have an account yet?<br />
-                            <p (click)="customerRegister()">Register now!</p>
+                    <form action="#" class="form d-flex flex-column justify-content-center align-items-center mb-3">
+                        <h2>Login</h2>
+                        <div class="input">
+                            <i class="fa-solid fa-at"></i>
+                            <input type="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="input">
+                            <i class="fa-solid fa-key"></i>
+                            <input [type]="password" placeholder="Enter your password" minlength=8 required>
+                            <button class="unhidePass" (click)="onClick()">
+                                <i class="fa fa-eye" aria-hidden="true" *ngIf="!show"></i>
+                                <i class="fa fa-eye-slash" aria-hidden="true" *ngIf="show"></i>
+                            </button>
+                        </div>
+                        <button class="btn loginBtn">Login!</button>
+                        <div class="formChange">
+                            Don't have an account yet?
+                            <p (click)=" customerRegister()">Register now!</p>
                         </div>
                     </form>
                 </ng-template>
                 <ng-template #register>
-                    <form action="">
-                        <div class="logReg d-flex flex-column justify-content-center align-items-center">
-                            <h2 class="headerLogin">Register</h2><br />
-                            <div class="input">
-                                <input type="email" placeholder="Enter your email">
-                            </div>
-                            <div class="input">
-                                <input [type]="password" placeholder="Enter your password" required>
-                                <button (click)="onClick()">
-                                    <i class="fa fa-eye" aria-hidden="true" *ngIf="!show"></i>
-                                    <i class="fa fa-eye-slash" aria-hidden="true" *ngIf="show"></i>
-                                </button>
-                            </div>
-                            <div class="input">
-                                <input type="name" placeholder="Enter your Name">
-                            </div>
-                            <div class="input">
-                                <input type="number" pattern="^[0-9]{10}$" minlength="10" maxlength="10" placeholder="Enter your Number">
-                            </div>
-                            <div class="input">
-                                <input type="text" placeholder="Enter your Address">
-                            </div>
-                            
-                            <button class="btn btn-primary">Register!</button>
-                            Already have an account?<br />
-                            <p (click)="customerLogin()" style="color: red;">Login now!</p>
+                    <form action="#" class="form d-flex flex-column justify-content-center align-items-center mb-3">
+                        <h2>Registration</h2>
+                        <div class="input">
+                            <i class="fa-solid fa-at"></i>
+                            <input type="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="input">
+                            <i class="fa-solid fa-key"></i>
+                            <input [type]="password" placeholder="Enter your password" minlength=8 required>
+                            <button class="unhidePass" (click)="onClick()">
+                                <i class="fa fa-eye" aria-hidden="true" *ngIf="!show"></i>
+                                <i class="fa fa-eye-slash" aria-hidden="true" *ngIf="show"></i>
+                            </button>
+                        </div>
+                        <div class="input">
+                            <i class="fa-solid fa-key"></i>
+                            <input type="password" placeholder="Enter your password again" minlength=8 required>
+                        </div>
+                        <div class="input">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="number" pattern="^[0-9]{10}$" minlength="10" maxlength="10"
+                                placeholder="Enter your Number" required>
+                        </div>
+                        <div class="input">
+                            <i class="fa-solid fa-map-pin"></i>
+                            <input type="text" placeholder="Enter your Address" required>
+                        </div>
+                        <button class="btn registerBtn">Register!</button>
+                        <div class="formChange register">
+                            Already have an account?
+                            <p (click)=" customerLogin()">Login now!</p>
                         </div>
                     </form>
                 </ng-template>
