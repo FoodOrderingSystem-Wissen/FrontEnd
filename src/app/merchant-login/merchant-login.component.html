@@ -5,7 +5,7 @@
 <div class="form-container d-flex flex-column justify-content-center align-items-center text-center"
     *ngIf="displayRegistration==true">
     <div class="col-md-12">
-        <form action="#" class="form d-flex flex-column justify-content-center align-items-center mb-3">
+        <form action="#" class="form d-flex flex-column justify-content-center align-items-center mb-3" ngNativeValidate >
             <div class="closeForm mt-3 position-relative m-auto" (click)="closeForm()" title="Close">
                 <i class="fa-solid fa-xmark"></i>
             </div>
@@ -36,7 +36,7 @@
             </div>
             <button class="btn registerBtn">Register!</button>
             <div class="formChange register">
-                Already registerd?
+                Already registered?
                 <p (click)=" displayLoginForm()">Login now!</p>
             </div>
         </form>
@@ -45,7 +45,7 @@
 <div class="form-container d-flex flex-column justify-content-center align-items-center text-center"
     *ngIf="displayLogin==true">
     <div class="col-md-12">
-        <form action="#" class="form d-flex flex-column justify-content-center align-items-center mb-3">
+        <form action="#" class="form d-flex flex-column justify-content-center align-items-center mb-3" ngNativeValidate >
             <div class="closeForm mt-3 position-relative m-auto" (click)="closeForm()" title="Close">
                 <i class="fa-solid fa-xmark"></i>
             </div>

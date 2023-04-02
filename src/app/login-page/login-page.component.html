@@ -5,7 +5,7 @@
             <div class="loginForm">
                 <div *ngIf="logReg==false; then login; else register"></div>
                 <ng-template #login>
-                    <form action="#" class="form d-flex flex-column justify-content-center align-items-center mb-3">
+                    <form action="#" class="form d-flex flex-column justify-content-center align-items-center mb-3" ngNativeValidate >
                         <h2>Login</h2>
                         <div class="input">
                             <i class="fa-solid fa-at"></i>
@@ -27,7 +27,7 @@
                     </form>
                 </ng-template>
                 <ng-template #register>
-                    <form action="#" class="form d-flex flex-column justify-content-center align-items-center mb-3">
+                    <form action="#" class="form d-flex flex-column justify-content-center align-items-center mb-3" ngNativeValidate >
                         <h2>Registration</h2>
                         <div class="input">
                             <i class="fa-solid fa-at"></i>
