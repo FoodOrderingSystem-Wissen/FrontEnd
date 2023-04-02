@@ -3,59 +3,60 @@
     <div class="row content w-100">
         <div class="col-md-6 m-auto">
             <div class="loginForm">
-                <div *ngIf="logReg==false; then login; else register"></div>
-                <ng-template #login>
-                    <form action="#">
+                <!-- <div *ngIf="logReg==false; then login; else register"></div> -->
+                <!-- <div *ngIf="logReg; then login; else register"></div> -->
+                <!-- <ng-template #login> -->
+                    <form action="#" *ngIf="showLogin" ngNativeValidate>
                         <div class="logReg d-flex flex-column justify-content-center align-items-center">
                             <h2 class="headerLogin">Login</h2>
                             <div class="input">
                                 <i class="fa-solid fa-at"></i>
-                                <input type="email" placeholder="Enter your email" required>
+                                <input type="email" placeholder="Enter your email" required #email>
                             </div>
                             <div class="input">
                                 <i class="fa-solid fa-key"></i>
-                                <input [type]="password" placeholder="Enter your password" required>
+                                <input [type]="password" placeholder="Enter your password" required #password>
                                 <button (click)="onClick()">
                                     <i class="fa fa-eye" aria-hidden="true" *ngIf="!show"></i>
                                     <i class="fa fa-eye-slash" aria-hidden="true" *ngIf="show"></i>
                                 </button>
                             </div>
-                            <button class="btn">Login!</button>
-                            Don't have an account yet?<br />
-                            <p (click)="customerRegister()">Register now!</p>
+                            <button class="btn"  (click)="login(email.value, password.value)"   >Login! </button>
+                            Don't have an account yet?<br>
+                            <p (click)="showRegistrationForm()">Register now!</p>
                         </div>
                     </form>
-                </ng-template>
-                <ng-template #register>
-                    <form action="">
+                <!-- </ng-template> -->
+                <!-- <ng-template #register> -->
+                    <form action="" *ngIf="showRegistration" ngNativeValidate>
                         <div class="logReg d-flex flex-column justify-content-center align-items-center">
                             <h2 class="headerLogin">Register</h2><br />
                             <div class="input">
-                                <input type="email" placeholder="Enter your email">
+                                <input type="email" placeholder="Enter your email" #email>
                             </div>
                             <div class="input">
-                                <input [type]="password" placeholder="Enter your password" required>
+                                <input [type]="password" placeholder="Enter your password" required #password>
                                 <button (click)="onClick()">
                                     <i class="fa fa-eye" aria-hidden="true" *ngIf="!show"></i>
                                     <i class="fa fa-eye-slash" aria-hidden="true" *ngIf="show"></i>
                                 </button>
                             </div>
                             <div class="input">
-                                <input type="name" placeholder="Enter your Name">
+                                <input type="name" placeholder="Enter your Name" #name>
                             </div>
                             <div class="input">
-                                <input type="number" pattern="^[0-9]{10}$" minlength="10" maxlength="10" placeholder="Enter your Number">
+                                <input type="number" pattern="^[0-9]{10}$" minlength="10" maxlength="10" placeholder="Enter your Number" #contact>
                             </div>
                             <div class="input">
-                                <input type="text" placeholder="Enter your Address">
+                                <input type="text" placeholder="Enter your Address" #address>
                             </div>
                             
-                            <button class="btn btn-primary">Register!</button>
+                            <button class="btn btn-primary"  (click)="register(email.value, password.value,name.value,contact.value,address.value)">Register!</button>
                             Already have an account?<br />
-                            <p (click)="customerLogin()" style="color: red;">Login now!</p>
+                            <p (click)="showLoginForm()" style="color: red;">Login now!</p>
                         </div>
                     </form>
-                </ng-template>
+                <!-- </ng-template> -->
             </div>
         </div>
     </div>
