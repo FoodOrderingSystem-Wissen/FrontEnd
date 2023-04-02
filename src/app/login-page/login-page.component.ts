@@ -7,7 +7,7 @@ import { CustomerService } from '../customer-service.service';
   styleUrls: ['./login-page.component.css'],
 })
 export class LoginPageComponent {
-  constructor(private router: Router, private renderer: Renderer2,private customerService: CustomerService) {
+  constructor(private router: Router, private renderer: Renderer2, private customerService: CustomerService) {
   }
 
   // //CustomerLoginRegisterForm
@@ -36,7 +36,7 @@ export class LoginPageComponent {
 
 
 
-   // show or hide the text in password input field
+  // show or hide the text in password input field
   password: string | undefined;
 
   show = false;
@@ -59,21 +59,21 @@ export class LoginPageComponent {
 
 
 
-// login and register with backend and service
+  // login and register with backend and service
 
   login(email: string, password: string) {
     this.customerService.login(email, password).subscribe((response) => {
       // handle successful login
       alert("logged in!")
       console.log(response)
-     
+
     }, (error) => {
       // handle login error
       alert("Failed")
-      console.log( error.error.text)
+      console.log(error.error.text)
     });
   }
- errorV:any
+  errorV: any
   register(email: string, password: string, name: string, contact: string, address: string) {
     this.customerService.register(email, password, name, contact, address).subscribe((response) => {
       // handle successful registration
@@ -82,11 +82,11 @@ export class LoginPageComponent {
     }, (error) => {
       // handle registration error
       alert("Sign up failed")
-      this.errorV=error
-    
-      console.log( error.error.text)
+      this.errorV = error
+
+      console.log(error.error.text)
     });
   }
 
-  
+
 }

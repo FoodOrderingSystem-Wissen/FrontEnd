@@ -1,6 +1,7 @@
-#loginContainer{
-    margin-bottom:10rem;
+#loginContainer {
+    margin-bottom: 10rem;
 }
+
 .logReg {
     height: auto;
     margin: auto;
@@ -19,22 +20,23 @@
 }
 
 /* Input fields */
-.input{
+.input {
     width: 80%;
     padding: 0.5rem;
-    margin:1rem;
+    margin: 1rem;
     border: 1px black solid;
     border-radius: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 input {
     width: 100%;
     padding: 0 20px;
     text-align: center;
     border: none;
-    outline:none;
+    outline: none;
 }
 
 input::placeholder {
@@ -77,8 +79,8 @@ p {
 
 
 /* to remove the up and down button in number input box */
-  .input input::-webkit-outer-spin-button,
+.input input::-webkit-outer-spin-button,
 .input input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
