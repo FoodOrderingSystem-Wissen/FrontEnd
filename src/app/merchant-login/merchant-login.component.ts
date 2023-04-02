@@ -9,13 +9,50 @@ import { Router } from '@angular/router';
 export class MerchantLoginComponent {
   constructor(private router: Router) {
   }
-  merchantBody: boolean = false;
-  merchantLogin: any = false;
-  restaurantRegistration: boolean = false;
-  backToCustometPage = () => this.router.navigate(['/customer']);
-  merchantBodyOpen = () => { this.merchantBody = true; this.restaurantRegistration = false }
-  merchantBodyClose = () => { this.merchantBody = false; this.merchantLogin = false }
-  merchantRegister = () => this.merchantLogin = true
-  Login = () => this.merchantLogin = false
-  restaurantReg = () => { this.restaurantRegistration = true; this.merchantBody = true; this.merchantLogin = null; }
+  // undraw illustratoin
+  images = [
+    "./assets/undraw_stepping_up_g6oo.svg"
+  ]
+  // 
+  // Show login or register form
+  displayLogin: boolean = false;
+  displayRegistration: boolean = false;
+
+  // displays login form over registration form
+  displayLoginForm() {
+    this.displayLogin = true;
+    this.displayRegistration = false;
+  }
+
+  // displays registration form over login form
+  displayRegistrationForm() {
+    this.displayLogin = false;
+    this.displayRegistration = true;
+  }
+  // 
+  // close form
+  closeForm() {
+    this.displayLogin = false;
+    this.displayRegistration = false;
+  }
+  // 
+  // hide/unhide password start
+  password: string | undefined;
+
+  show = false;
+
+  ngOnInit() {
+    this.password = 'password';
+  }
+
+  onClick() {
+    if (this.password === 'password') {
+      this.password = 'text';
+      this.show = true;
+    } else {
+      this.password = 'password';
+      this.show = false;
+    }
+  }
+  // hide/unhide password end
 }

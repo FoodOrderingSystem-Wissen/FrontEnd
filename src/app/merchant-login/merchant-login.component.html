@@ -1,45 +1,104 @@
-<div class="merchant-page-div">
-    <button class="btn btn-danger" id="restaurant" (click)="restaurantReg()">Add restaurant</button>
-    <button class="btn btn-danger" id="merchantLogin" (click)="merchantBodyOpen()">Merchant
-        Login</button><br /><br /><br />
-    <h3 id="d">Why be a part of us?</h3>
-    <div class="info"></div>
-    <div class="body" *ngIf="merchantBody">
-        <div class="merchantForm" *ngIf="merchantLogin==false">
-            <div class="mClose" (click)="merchantBodyClose()" title="Close">
-                &times;
+<div id="loginRegContainer" class="d-flex justify-content-around align-items-center">
+    <button class="btn" (click)="displayRegistrationForm()">Add restaurant</button>
+    <button class="btn" (click)="displayLoginForm()">Merchant Login</button>
+</div>
+<div class="form-container d-flex flex-column justify-content-center align-items-center text-center"
+    *ngIf="displayRegistration==true">
+    <div class="col-md-12">
+        <form action="#" class="form d-flex flex-column justify-content-center align-items-center mb-3">
+            <div class="closeForm mt-3 position-relative m-auto" (click)="closeForm()" title="Close">
+                <i class="fa-solid fa-xmark"></i>
             </div>
-            <h2 id="mLogin">Merchant Login</h2><br /><br />
-            <input type="email" placeholder="📧 Enter your email"><br /><br />
-            <input type="password" placeholder="🔑 Enter your password"><br /><br />
-            <button class="btn btn-danger">Login!</button><br /><br />
-            Don't have an account yet?<br />
-            <p (click)="merchantRegister()">Register now!</p>
-        </div>
-        <div class="merchantRegisterForm" *ngIf="merchantLogin==true">
-            <div class="mClose" (click)="merchantBodyClose()" title="Close">
-                &times;
+            <h2>Merchant Registration</h2>
+            <div class="input">
+                <i class="fa-solid fa-at"></i>
+                <input type="email" placeholder="Enter your email" required>
             </div>
-            <h2 id="mLogin">Merchant Register</h2><br /><br />
-            <input type="email" placeholder="📧 Enter your email"><br /><br />
-            <input type="name" placeholder="🍽️ Enter restaurent name"><br /><br />
-            <input type="password" placeholder="🔑 Enter your password"><br /><br />
-            <button class="btn btn-primary">Register!</button><br /><br />
-            Already Registered?<br />
-            <p (click)="Login()" style="color: red;">Login!</p>
-        </div>
-        <!--Add Resutaurent-->
-        <div class="restaurentRegisterForm" *ngIf="restaurantRegistration">
-            <div class="mClose" (click)="merchantBodyClose()" title="Close">
-                &times;
+            <div class="input">
+                <i class="fa-solid fa-at"></i>
+                <input type="email" placeholder="Enter restaurant name" required>
             </div>
-            <h2 id="mLogin">Join US</h2><br /><br />
-            <input type="email" placeholder="📧 Enter your email"><br /><br />
-            <input type="name" placeholder="🍽️ Enter restaurent name"><br /><br />
-            <input type="password" placeholder="🔑 Enter your password"><br /><br />
-            <button class="btn btn-primary">Register!</button><br /><br />
-        </div>
-
+            <div class="input">
+                <i class="fa-solid fa-key"></i>
+                <input [type]="password" placeholder="Enter your password" minlength=8 required>
+                <button class="unhidePass" (click)="onClick()">
+                    <i class="fa fa-eye" aria-hidden="true" *ngIf="!show"></i>
+                    <i class="fa fa-eye-slash" aria-hidden="true" *ngIf="show"></i>
+                </button>
+            </div>
+            <div class="input">
+                <i class="fa-solid fa-key"></i>
+                <input [type]="password" placeholder="Enter your password again" minlength=8 required>
+                <button class="unhidePass" (click)="onClick()">
+                    <i class="fa fa-eye" aria-hidden="true" *ngIf="!show"></i>
+                    <i class="fa fa-eye-slash" aria-hidden="true" *ngIf="show"></i>
+                </button>
+            </div>
+            <button class="btn registerBtn">Register!</button>
+            <div class="formChange register">
+                Already registerd?
+                <p (click)=" displayLoginForm()">Login now!</p>
+            </div>
+        </form>
     </div>
+</div>
+<div class="form-container d-flex flex-column justify-content-center align-items-center text-center"
+    *ngIf="displayLogin==true">
+    <div class="col-md-12">
+        <form action="#" class="form d-flex flex-column justify-content-center align-items-center mb-3">
+            <div class="closeForm mt-3 position-relative m-auto" (click)="closeForm()" title="Close">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <h2>Merchant Login</h2>
+            <div class="input">
+                <i class="fa-solid fa-at"></i>
+                <input type="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input">
+                <i class="fa-solid fa-key"></i>
+                <input [type]="password" placeholder="Enter your password" minlength=8 required>
+                <button class="unhidePass" (click)="onClick()">
+                    <i class="fa fa-eye" aria-hidden="true" *ngIf="!show"></i>
+                    <i class="fa fa-eye-slash" aria-hidden="true" *ngIf="show"></i>
+                </button>
+            </div>
+            <button class="btn loginBtn">Login!</button>
+            <div class="formChange">
+                Don't have an account yet?
+                <p (click)=" displayRegistrationForm()">Register now!</p>
+            </div>
+        </form>
+    </div>
+</div>
 
+<!-- Why be a part of us section -->
+<div id="whyUs" class="d-flex flex-column justify-content-center align-items-center mb-5">
+    <h1 class="display-6"><b>Why be a part of us?</b></h1>
+    <div class="info mt-5 w-75 text-justify">
+        <div class="row content">
+            <div class="row text-center">
+                <div class="col-lg-6 col-12">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique recusandae maiores qui eaque
+                        ea sint
+                        natus,
+                        numquam dolorum nemo, repellat quidem, vel a suscipit quia error quo explicabo rem ipsam.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut dolorum molestiae quasi,
+                        doloremque,
+                        accusantium maxime ullam quam necessitatibus sed voluptates earum. Placeat incidunt quod ipsam
+                        laboriosam
+                        quasi et sit perferendis.
+                    </p>
+                    <br>
+                    <p class="text-center blockquote">Come, grow with us!</p>
+                    <p class="text-center blockquote-footer">Team Zwiggy</p>
+                </div>
+                <div class="col-lg-6 col-12 text-center">
+                    <img class="w-75" src="../../assets/undraw_stepping_up_g6oo.svg" alt="Success">
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

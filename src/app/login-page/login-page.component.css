@@ -1,6 +1,7 @@
-#loginContainer{
-    margin-bottom:10rem;
+#loginContainer {
+    margin-bottom: 10rem;
 }
+
 .logReg {
     height: auto;
     margin: auto;
@@ -8,33 +9,34 @@
     width: 58%;
     background-color: white;
     border-radius: 50px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     padding: 5px;
     text-align: center;
+    transition: 1s all;
 }
-
 .headerLogin {
     padding-top: 50px;
     padding-bottom: 50px;
 }
 
 /* Input fields */
-.input{
+.input {
     width: 80%;
     padding: 0.5rem;
-    margin:1rem;
+    margin: 1rem;
     border: 1px black solid;
     border-radius: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 input {
     width: 100%;
     padding: 0 20px;
     text-align: center;
     border: none;
-    outline:none;
+    outline: none;
 }
 
 input::placeholder {

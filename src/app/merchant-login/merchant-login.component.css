@@ -1,99 +1,134 @@
-.merchant-page-div{
-    background-image: url(https://png.pngtree.com/background/20210710/original/pngtree-geometric-gradient-gourmet-fast-food-advertising-poster-background-material-picture-image_1006818.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 38%;
-    height: 100vh;
-    width: 100vw;
-    background-color: whitesmoke;
-    margin-top: 80px;
+/* Add restauran - Merchant login button */
+#loginRegContainer {
+    margin-top: -1.8rem;
 }
-#restaurant{
-    margin-top: 300px;
-    margin-left: 200px;
-    border-radius: 30px;
+
+#loginRegContainer button {
+    color: white;
+    background-color: #D90429;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 1rem 4rem;
+    border-radius: 2rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    /* animation */
+    animation-name: buttonPop;
+    animation-duration: 500ms;
 }
-#merchantLogin{
-    margin-top: 300px;
-    margin-right: 200px;
-    float: right;
-    border-radius: 30px;
+
+/* scale animation on buttons */
+@keyframes buttonPop {
+    0% {
+        transform: scale(0);
+    }
 }
-#d{
-    
-    text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+/* Form */
+/* close form */
+.closeForm {
+    cursor: pointer;
+    width: 90%;
+    text-align: right;
 }
-.info{
-    background-color: aliceblue;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    margin: auto;
-    width: 70%;
-    height: 40%;
-    border-radius: 30px;
-   
+.closeForm i{
+    font-size: 1.5rem;
 }
-.body{
+
+/* background*/
+.form-container {
     position: absolute;
     top: 0;
     left: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color : rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 175vh;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+form {
+    width: 30rem;
+    background-color: white;
+    margin: auto;
+    border-radius: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 5px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* form header */
+/* Merchant login / merchant registration */
+form h2 {
+    margin: 1rem 0 3rem;
+}
+
+/* Input fields */
+.input {
+    width: 80%;
+    padding: 0.5rem;
+    margin: 1rem;
+    border: 1px black solid;
+    border-radius: 1rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
-.merchantForm{
-    height: 50%;
-    width: 35%;
-    background-color: aliceblue;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    border-radius: 100px;
-    text-align: center;
-}
-.mClose{
-   float: right;
-   margin-top: 10px;
-   margin-right:45px;
-   font-size: 35px;
-   cursor: pointer;
-}
-#mLogin{
-    margin-top: 25px;
-    text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-input{
-    height: 50px;
-    width: 300px;
-    border-radius: 10px;
-    border: 2px solid grey;
 
+input {
+    width: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    transition: 500ms all
 }
-::placeholder{
-    font-size: 20px;
+
+input::placeholder {
+    font-weight: 5px !important;
 }
-p{
-    color: blue;
+
+/* hide/unhide password */
+.unhidePass {
+    background: none;
+    outline: none;
+    border: none;
+}
+
+/* Submit button -  Login button */
+form>button {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    width: 8rem;
+    margin: 2rem 0;
+    /* shadows */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+}
+
+/* Login button*/
+.loginBtn {
+    background-color: #D90429;
+}
+
+/* Register button*/
+.registerBtn {
+    background-color: #0480D9;
+}
+
+/* change to login or registration form */
+.formChange p {
+    color: #0480D9;
     cursor: pointer;
 }
-button{
-    border-radius: 20px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+.formChange.register p {
+    color: #D90429;
 }
-.merchantRegisterForm{
-    height: 57%;
-    width: 37%;
-    background-color: aliceblue;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    border-radius: 100px;
-    text-align: center;
+
+/* Info - why be a part of us? */
+#whyUs {
+    min-height: 85vh;
 }
-.restaurentRegisterForm{
-    height: 50%;
-    width: 35%;
-    background-color: aliceblue;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    border-radius: 100px;
-    text-align: center;
+
+.info p {
+    text-align: justify;
 }
