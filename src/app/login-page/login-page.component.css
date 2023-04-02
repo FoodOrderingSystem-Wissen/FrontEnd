@@ -76,3 +76,11 @@ p {
 
     align-items: center;
 }
+
+
+/* to remove the up and down button in number input box */
+  .input input::-webkit-outer-spin-button,
+.input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
