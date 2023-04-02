@@ -2,21 +2,30 @@
     margin-bottom: 10rem;
 }
 
-.logReg {
-    height: auto;
+/* Forms */
+form {
+    width: 30rem;
+    background-color: white;
     margin: auto;
     margin-top: -5rem;
-    width: 58%;
-    background-color: white;
-    border-radius: 50px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 5px;
     text-align: center;
+    font-family: 'Poppins', sans-serif;
+    animation-name: slideUp;
+    animation-duration: 500ms;
+}
+@keyframes slideUp {
+    0%{
+        transform: translateY(200px);
+    }
 }
 
-.headerLogin {
-    padding-top: 50px;
-    padding-bottom: 50px;
+/* form header */
+/* Merchant login / merchant registration */
+form h2 {
+    margin: 3rem 0;
 }
 
 /* Input fields */
@@ -33,50 +42,53 @@
 
 input {
     width: 100%;
-    padding: 0 20px;
     text-align: center;
     border: none;
     outline: none;
+    transition: 500ms all
 }
 
 input::placeholder {
     font-weight: 5px !important;
 }
 
-.btn {
-    margin-top: 30px;
-    height: auto;
-    width: 100px;
-    border-radius: 10px;
-    text-align: center;
-    border-width: 1px;
-    background-color: red;
+/* hide/unhide password */
+.unhidePass {
+    background: none;
+    outline: none;
+    border: none;
+}
+
+/* Submit button -  Login button */
+form>button {
+    font-family: 'Poppins', sans-serif;
     color: white;
-    margin-bottom: 30px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    width: 8rem;
+    margin: 2rem 0;
+    /* shadows */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
 }
 
-.btn:hover {
+/* Login button*/
+.loginBtn {
+    background-color: #D90429;
+}
+
+/* Register button*/
+.registerBtn {
+    background-color: #0480D9;
+}
+
+/* change to login or registration form */
+.formChange p {
+    color: #0480D9;
     cursor: pointer;
-    transform: scale(1.1);
 }
 
-
-::placeholder {
-    font-size: 20px;
+.formChange.register p {
+    color: #D90429;
 }
-
-p {
-    color: blue;
-    cursor: pointer;
-}
-
-:host {
-    /* display: flex; */
-
-    align-items: center;
-}
-
 
 /* to remove the up and down button in number input box */
 .input input::-webkit-outer-spin-button,

@@ -9,16 +9,8 @@ import { CustomerService } from '../customer-service.service';
 export class LoginPageComponent {
   constructor(private router: Router, private renderer: Renderer2, private customerService: CustomerService) {
   }
-
-  // //CustomerLoginRegisterForm
-  // loginRegisterForm: boolean = true;
-  // logReg: boolean = false;
-  // customerRegister = () => this.logReg = true
-  // customerLogin = () => this.logReg = false
-  // closingCustomerLoginForm = () => { this.loginRegisterForm = false; this.logReg = false }
   //Redirecting to Merchant
   merchant = () => this.router.navigate(['/merchant']);
-
 
   // show only login or signup
   showLogin = true;
@@ -54,11 +46,6 @@ export class LoginPageComponent {
     }
   }
 
-
-
-
-
-
   // login and register with backend and service
 
   login(email: string, password: string) {
@@ -87,6 +74,5 @@ export class LoginPageComponent {
       console.log(error.error.text)
     });
   }
-
 
 }
