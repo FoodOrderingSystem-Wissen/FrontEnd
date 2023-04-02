@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-
+  //images
+  images = [
+    "./assets/homePageBG.jpg",
+  ]
 }
