@@ -21,13 +21,22 @@ export class LoginPageComponent{
   //Redirecting to Merchant
   merchant=()=> this.router.navigate(['/merchant']);
 
-  @ViewChild('passwordInput', { static: true }) passwordInput!: ElementRef<HTMLInputElement>;
-  isPasswordVisible = false;
+  password: string | undefined;
 
-  togglePassword() {
-    this.isPasswordVisible = !this.isPasswordVisible;
-    const inputType = this.isPasswordVisible ? 'text' : 'password';
-    this.renderer.setProperty(this.passwordInput.nativeElement, 'type', inputType);
+  show = false;
+
+  ngOnInit() {
+    this.password = 'password';
+  }
+
+  onClick() {
+    if (this.password === 'password') {
+      this.password = 'text';
+      this.show = true;
+    } else {
+      this.password = 'password';
+      this.show = false;
+    }
   }
   
   
