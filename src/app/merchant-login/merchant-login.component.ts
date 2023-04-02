@@ -7,15 +7,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./merchant-login.component.css']
 })
 export class MerchantLoginComponent {
-  constructor(private router:Router){
+  constructor(private router: Router) {
   }
-  merchantBody:boolean=false;
-  merchantLogin:any=false;
-  restaurantRegistration:boolean=false;
-  backToCustometPage=()=>this.router.navigate(['/customer']);
-  merchantBodyOpen=()=>{this.merchantBody=true;this.restaurantRegistration=false}
-  merchantBodyClose=()=>{this.merchantBody=false; this.merchantLogin=false}
-  merchantRegister=()=>this.merchantLogin=true
-  Login=()=>this.merchantLogin=false
-  restaurantReg=()=>{this.restaurantRegistration=true;this.merchantBody=true; this.merchantLogin=null;}
+  merchantBody: boolean = false;
+  merchantLogin: any = false;
+  restaurantRegistration: boolean = false;
+  backToCustometPage = () => this.router.navigate(['/customer']);
+  merchantBodyOpen = () => { this.merchantBody = true; this.restaurantRegistration = false }
+  merchantBodyClose = () => { this.merchantBody = false; this.merchantLogin = false }
+  merchantRegister = () => this.merchantLogin = true
+  Login = () => this.merchantLogin = false
+  restaurantReg = () => { this.restaurantRegistration = true; this.merchantBody = true; this.merchantLogin = null; }
 }

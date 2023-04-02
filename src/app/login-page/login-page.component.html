@@ -1,31 +1,33 @@
-        <div class="login-div">     
-        <!--CustomerLogin-->
-        <ng-container *ngIf="loginRegisterForm==true; then displayLoginRegisterForm; else closeLoginRegisterForm"></ng-container>
-        <ng-template #displayLoginRegisterForm>
-            <div class="loginForm">
-                <img src="https://img.freepik.com/free-vector/restaurant-mural-wallpaper_23-2148692632.jpg" alt=""><br/><br/>
-                <div *ngIf="logReg==false; then login; else register"></div>
-                    <ng-template #login>
-                        <div class="logReg">
-                        <h2>Login</h2><br/> 
-                        <input type="email" placeholder="📧 Enter your email"><br/><br/>
-                        <input type="password" placeholder="🔑 Enter your password"><br/><br/>
-                        <button class="btn btn-danger">Login!</button><br/><br/>
-                        Don't have an account yet?<br/>
-                        <p (click)="customerRegister()">Register now!</p>
-                        </div>
-                    </ng-template>
-                    <ng-template #register>
-                        <div class="logReg">
-                        <h2>Register</h2><br/>
-                        <input type="email" placeholder="📨 Enter your email"><br/><br/>
-                        <input type="password" placeholder="🗝️ Enter your password"><br/><br/>
-                        <button class="btn btn-primary">Register!</button><br/><br/>  
-                        Already have an account?<br/>
-                        <p (click)="customerLogin()" style="color: red;">Login now!</p>
-                        </div>  
-                    </ng-template>
-            </div>
-        </ng-template>
-        <ng-template #closeLoginRegisterForm></ng-template>
+<div class="login-div bg-danger">
+    <!--CustomerLogin-->
+    <ng-container
+        *ngIf="loginRegisterForm==true; then displayLoginRegisterForm; else closeLoginRegisterForm"></ng-container>
+    <ng-template #displayLoginRegisterForm>
+        <div class="loginForm">
+            <img src="https://img.freepik.com/free-vector/restaurant-mural-wallpaper_23-2148692632.jpg"
+                alt=""><br /><br />
+            <div *ngIf="logReg==false; then login; else register"></div>
+            <ng-template #login>
+                <div class="logReg">
+                    <h2>Login</h2><br />
+                    <input type="email" placeholder="📧 Enter your email"><br /><br />
+                    <input type="password" placeholder="🔑 Enter your password"><br /><br />
+                    <button class="btn btn-danger">Login!</button><br /><br />
+                    Don't have an account yet?<br />
+                    <p (click)="customerRegister()">Register now!</p>
+                </div>
+            </ng-template>
+            <ng-template #register>
+                <div class="logReg">
+                    <h2>Register</h2><br />
+                    <input type="email" placeholder="📨 Enter your email"><br /><br />
+                    <input type="password" placeholder="🗝️ Enter your password"><br /><br />
+                    <button class="btn btn-primary">Register!</button><br /><br />
+                    Already have an account?<br />
+                    <p (click)="customerLogin()" style="color: red;">Login now!</p>
+                </div>
+            </ng-template>
         </div>
+    </ng-template>
+    <ng-template #closeLoginRegisterForm></ng-template>
+</div>

@@ -1,4 +1,4 @@
-.loginForm{
+.loginForm {
     height: 75%;
     width: 45%;
     background-color: aliceblue;
@@ -6,22 +6,24 @@
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     padding: 5px;
 }
-.login-div{
-        position: relative;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        width: 100vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+
+.login-div {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.loginForm img{
+
+.loginForm img {
     height: 240px;
     width: 100%;
     border-radius: 145px 145px 0px 0px;
 }
-.logReg{
+
+.logReg {
     height: 340px;
     margin: auto;
     width: 58%;
@@ -32,23 +34,25 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
 }
-input{
+
+input {
     height: 50px;
     width: 300px;
     border-radius: 10px;
     border: 2px solid grey;
 }
-::placeholder{
+
+::placeholder {
     font-size: 20px;
 }
-p{
+
+p {
     color: blue;
     cursor: pointer;
 }
-#closeButton{
+
+#closeButton {
     float: right;
-    padding: 10px; 
+    padding: 10px;
     cursor: pointer;
 }
-
-
