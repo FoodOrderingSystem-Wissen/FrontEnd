@@ -19,6 +19,9 @@ export class LoginPageComponent {
   //Redirecting to Merchant
   merchant = () => this.router.navigate(['/merchant']);
 
+
+
+   // show or hide the text in password input field
   password: string | undefined;
 
   show = false;
@@ -26,7 +29,6 @@ export class LoginPageComponent {
   ngOnInit() {
     this.password = 'password';
   }
-
   onClick() {
     if (this.password === 'password') {
       this.password = 'text';
@@ -36,4 +38,6 @@ export class LoginPageComponent {
       this.show = false;
     }
   }
+
+  
 }

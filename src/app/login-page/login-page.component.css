@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-
-
-.logReg{
-=======
 #loginContainer{
     margin-bottom:10rem;
 }
 .logReg {
->>>>>>> d633af723b5234876562c56b86a32c710c90fd90
     height: auto;
     margin: auto;
     margin-top: -5rem;
@@ -79,8 +73,12 @@ p {
     /* display: flex; */
 
     align-items: center;
-<<<<<<< HEAD
-  }
-=======
 }
->>>>>>> d633af723b5234876562c56b86a32c710c90fd90
+
+
+/* to remove the up and down button in number input box */
+  .input input::-webkit-outer-spin-button,
+.input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
