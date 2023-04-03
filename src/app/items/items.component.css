@@ -1,0 +1,20 @@
+.fontNew {
+    padding-top: 100px;
+    font-family: 'Delicious Handrawn', cursive;
+    font-size: 70px;
+    text-align: center;
+
+}
+
+.card img {
+    height: 50%;
+}
+
+.cardLoop {
+    height: 350px;
+    width: 200px;
+}
+
+.no-border {
+    border: none;
+}

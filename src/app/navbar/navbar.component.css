@@ -38,6 +38,13 @@ nav{
 /* Title */
 .title {
     color: white;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
 }
 
 /* Title - Zwiggy */
