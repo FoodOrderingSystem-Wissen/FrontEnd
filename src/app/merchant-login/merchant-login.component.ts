@@ -42,6 +42,7 @@ export class MerchantLoginComponent {
   show = false;
 
   ngOnInit() {
+    this.checkIfLoggedIn();
     this.password = 'password';
   }
 
@@ -55,4 +56,11 @@ export class MerchantLoginComponent {
     }
   }
   // hide/unhide password end
+
+  // Checkign if user is already logged in
+  checkIfLoggedIn() {
+    if (localStorage.getItem('loggedIn') == 'true') {
+      this.router.navigateByUrl('/Home');
+    }
+  }
 }

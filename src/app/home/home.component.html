@@ -1,0 +1,49 @@
+<div class="container-fluid home text-center">
+    <nav class="navbar bg-body-tertiary" style="background-color:none">
+        <div class="container">
+            <a class="navbar-brand" routerLinkActive="active" routerLink="/Home">
+                <i class="fa-solid fa-house"></i>
+            </a>
+            <a class="navbar-brand" routerLinkActive="active" routerLink="/" (click)="logout()">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </a>
+        </div>
+    </nav>
+    <div class="backgroundImage" [ngStyle]="{'background-image':'url('+image[0]+')'}"></div>
+    <div class="overlay"></div>
+    <!--  -->
+    <div class="title h-100 d-flex flex-column justify-content-start align-items-center text-center">
+        <h1 class="display-1">Order from your favourite restaurants!</h1>
+        <div class="input search mt-5 d-flex justify-content-around align-items-center">
+            <input type="text" placeholder="Search now!" class="text-center" required>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </div>
+</div>
+<div class="container-fluid text-center restaurants">
+    <div class="title mb-5">
+        <h1 class="display-6">Browse the restaurants</h1>
+        <div class="underline"></div>
+    </div>
+    <div class="row row-cols-2 row-cols-md-3 row-cols-xl-4 g-4 p-5">
+        <div class="col" *ngFor="let restaurant of arrayOfRestaurants; let i = index;">
+            <div class="card">
+                <img [src]="foodImages[i]" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <!-- <h5 class="card-title">Tara ma</h5> -->
+                    <h5 class="card-title">{{restaurant.name}}</h5>
+                    <p><small>Indian, Continental, Chinese cuisine</small></p>
+                </div>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <button class="btn btn-outline-info">View Menu</button>
+            </div>
+            <ng-container {{imageIndex:i}}></ng-container>
+        </div>
+    </div>
+</div>

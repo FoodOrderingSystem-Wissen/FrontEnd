@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef, Renderer2 } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CustomerService } from '../customer-service.service';
 @Component({
@@ -7,10 +7,8 @@ import { CustomerService } from '../customer-service.service';
   styleUrls: ['./login-page.component.css'],
 })
 export class LoginPageComponent {
-  constructor(private router: Router, private renderer: Renderer2, private customerService: CustomerService) {
+  constructor(private router: Router, private customerService: CustomerService) {
   }
-  //Redirecting to Merchant
-  merchant = () => this.router.navigate(['/merchant']);
 
   // show only login or signup
   showLogin = true;
@@ -26,14 +24,13 @@ export class LoginPageComponent {
     this.showRegistration = false;
   }
 
-
-
   // show or hide the text in password input field
   password: string | undefined;
 
   show = false;
 
   ngOnInit() {
+    this.checkIfLoggedIn();
     this.password = 'password';
   }
   onClick() {
@@ -47,32 +44,36 @@ export class LoginPageComponent {
   }
 
   // login and register with backend and service
-
   login(email: string, password: string) {
     this.customerService.login(email, password).subscribe((response) => {
       // handle successful login
-      alert("logged in!")
       console.log(response)
-
+      localStorage.setItem('loggedIn', 'true')
+      this.router.navigateByUrl('/Home');
     }, (error) => {
       // handle login error
-      alert("Failed")
+      alert("Error! Login Failed.")
       console.log(error.error.text)
     });
   }
-  errorV: any
+
   register(email: string, password: string, name: string, contact: string, address: string) {
     this.customerService.register(email, password, name, contact, address).subscribe((response) => {
       // handle successful registration
-      alert("Successfully Signed Up")
+      alert("Successfully Signed Up, Please login.")
       console.log(response)
     }, (error) => {
       // handle registration error
       alert("Sign up failed")
-      this.errorV = error
-
       console.log(error.error.text)
     });
+  }
+
+  // Checkign if user is already logged in
+  checkIfLoggedIn() {
+    if (localStorage.getItem('loggedIn') == 'true') {
+      this.router.navigateByUrl('/Home');
+    }
   }
 
 }
