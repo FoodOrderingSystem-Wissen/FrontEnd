@@ -10,8 +10,4 @@ export class RestaurantService {
   getAllRestaurants() {
     return this.http.get('http://localhost:8090/api/restaurants/getAllRestaurant', {});
   }
-
-  // register(email: string, password: string, name: string, contact: string, address: string) {
-  //   return this.http.post('http://localhost:8090/api/customers/register', { email, password, name, contact, address });
-  // }
 }

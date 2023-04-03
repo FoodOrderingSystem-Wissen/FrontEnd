@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { MerchantServiceService } from '../merchant-service.service';
 
 @Component({
   selector: 'app-merchant-login',
@@ -7,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./merchant-login.component.css']
 })
 export class MerchantLoginComponent {
-  constructor(private router: Router) {
+  constructor(private router: Router, private merchantService: MerchantServiceService) {
   }
   // undraw illustratoin
   images = [
@@ -61,6 +62,39 @@ export class MerchantLoginComponent {
   checkIfLoggedIn() {
     if (localStorage.getItem('loggedIn') == 'true') {
       this.router.navigateByUrl('/Home');
+    }
+  }
+  // login and register with backend and service
+
+  login(email: string, password: string) {
+    this.merchantService.login(email, password).subscribe((response) => {
+      // handle successful login
+      alert("logged in!")
+      console.log(response)
+
+    }, (error) => {
+      // handle login error
+      alert("Failed")
+      console.log(error.error.text)
+    });
+  }
+  errorV: any
+  register(email: string, password: string, name: string, passwordAgain: string) {
+    if (password == passwordAgain) {
+      this.merchantService.register(email, password, name).subscribe((response) => {
+        // handle successful registration
+        alert("Successfully Signed Up")
+        console.log(response)
+      }, (error) => {
+        // handle registration error
+        alert("Sign up failed")
+        this.errorV = error
+
+        console.log(error.error.text)
+      });
+    }
+    else {
+      alert("Password did not match in both fields!!");
     }
   }
 }
