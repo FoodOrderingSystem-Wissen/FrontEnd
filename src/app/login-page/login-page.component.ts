@@ -52,7 +52,8 @@ export class LoginPageComponent {
     this.customerService.login(email, password).subscribe((response) => {
       // handle successful login
       alert("logged in!")
-      console.log(response)
+      // console.log(response)
+      this.router.navigate(['/items']);
 
     }, (error) => {
       // handle login error
